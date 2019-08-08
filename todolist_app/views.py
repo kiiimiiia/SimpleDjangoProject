@@ -53,6 +53,11 @@ def edit_task(request , task_id):
         task_obj = Tasklist.objects.get(pk=task_id)
         return render(request , 'edit.html', {'task_obj' : task_obj})
 
+def index(request):
+    context ={
+        'index_text' : "Welcome to index page."
+    }
+    return render(request , 'index.html', context)
 
 
 def contact(request):
